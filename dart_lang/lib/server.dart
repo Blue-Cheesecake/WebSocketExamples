@@ -33,7 +33,7 @@ void handleConnection(Socket client) {
 
       // Add a client to clients list
       clients.add(client);
-      print("[Server]: You logged in as $message");
+      client.write("[Server]: You logged in as $message");
     },
     // Handle Error case.
     onError: (error) {

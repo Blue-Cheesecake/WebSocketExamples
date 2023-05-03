@@ -22,4 +22,11 @@ Future<void> main(List<String> args) async {
       socket.destroy();
     },
   );
+
+  // ask user for username
+  String? username;
+  do {
+    username = stdin.readLineSync();
+  } while (username == null || username.isEmpty);
+  socket.write(username);
 }
