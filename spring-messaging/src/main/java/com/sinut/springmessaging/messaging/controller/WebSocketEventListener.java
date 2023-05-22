@@ -31,7 +31,7 @@ public class WebSocketEventListener {
         final String username = (String) Objects.requireNonNull(headerAccessor.getSessionAttributes()).get("username");
         final Message message = Message
                 .builder()
-                .type(MessageType.DISCONNECTED)
+                .type(MessageType.DISCONNECT)
                 .sender(username)
                 .build();
         sendingOperations.convertAndSend("/topic/public", message);
