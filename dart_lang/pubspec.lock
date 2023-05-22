@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  clock:
+    dependency: transitive
+    description:
+      name: clock
+      sha256: cb6d7f03e1de671e34607e909a7213e31d7752be4fb66a86d29fe1eb14bfb5cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   collection:
     dependency: transitive
     description:
@@ -113,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.1"
   io:
     dependency: transitive
     description:
@@ -241,6 +257,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
+  sockjs_client_wrapper:
+    dependency: "direct main"
+    description:
+      name: sockjs_client_wrapper
+      sha256: c304e85f86d50503560bb2bd226d32f1d5144123c319ee505a33e15b07917054
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   source_map_stack_trace:
     dependency: transitive
     description:
@@ -337,6 +361,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "11.4.0"
+  w_common:
+    dependency: transitive
+    description:
+      name: w_common
+      sha256: "54e34b485571aa5332a7ab22658fcd1f747558f03fb04d9715e2d2d9bd6ee32e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   watcher:
     dependency: transitive
     description:
