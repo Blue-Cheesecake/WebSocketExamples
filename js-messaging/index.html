@@ -17,7 +17,7 @@
     });
 
     ws.addEventListener("message", (e) => {
-      console.log("On Message:", e.data);
+      console.log("On Message:", JSON.parse(e.data));
     });
   </script>
 </html>

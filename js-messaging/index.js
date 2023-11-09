@@ -25,7 +25,14 @@ wss.on("connection", (ws) => {
   // Peridically sends data
   let count = 1;
   setInterval(() => {
-    ws.send(`HALO: ${count}`);
+    ws.send(
+      JSON.stringify({
+        fullName: "Sinut Wattanarporn",
+        age: 22,
+        counter: count,
+      })
+    );
+
     count++;
   }, 1500);
 });
