@@ -17,4 +17,15 @@ wss.on("connection", (ws) => {
   ws.on("close", () => {
     console.log("Client has disconnected");
   });
+
+  ws.on("error", () => {
+    console.log("Something went wrong!");
+  });
+
+  // Peridically sends data
+  let count = 1;
+  setInterval(() => {
+    ws.send(`HALO: ${count}`);
+    count++;
+  }, 1500);
 });
