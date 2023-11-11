@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   web_socket_channel: ^2.4.0
+  flutter_riverpod: 2.4.5
 
   # Generators
   freezed_annotation: 2.2.0
