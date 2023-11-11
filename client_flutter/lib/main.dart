@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'features/js_messaging/js_messaging.dart';
 
 void main() {
-  runApp(const MainAppWD());
+  runApp(const ProviderScope(child: MainAppWD()));
 }
 
 class MainAppWD extends StatelessWidget {
@@ -12,6 +13,7 @@ class MainAppWD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       routes: {
         '/': (context) => const Homepage(),
         '/jsMessaging': (context) => const JSMessagingPage(),
