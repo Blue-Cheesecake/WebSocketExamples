@@ -1,5 +1,5 @@
 import '../../domain/domain.dart';
 
-abstract interface class IJSMessagingDataSource {
+abstract interface class IJSMessagingRepository {
   Stream<IProfileEntity> watchProfile();
 }
