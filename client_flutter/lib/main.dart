@@ -1,44 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:async';
 
-import 'features/js_messaging/js_messaging.dart';
+import './main_run_app.dart';
 
-void main() {
-  runApp(const ProviderScope(child: MainAppWD()));
-}
-
-class MainAppWD extends StatelessWidget {
-  const MainAppWD({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      routes: {
-        '/': (context) => const Homepage(),
-        '/jsMessaging': (context) => const JSMessagingPage(),
-      },
-      initialRoute: "/",
-    );
-  }
-}
-
-class Homepage extends StatelessWidget {
-  const Homepage({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/jsMessaging');
-            },
-            child: const Text('JS MESSAGING')),
-      ),
-    );
-  }
+FutureOr<void> main() async {
+  mainRunApp();
 }
