@@ -1,9 +1,5 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 
 import './core/core.dart';
 
@@ -12,10 +8,6 @@ class AppWD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    
-
-    
     return ProviderScope(
       child: MaterialApp.router(
         routerConfig: CLIFNavigation.instance.router,
@@ -24,6 +16,5 @@ class AppWD extends StatelessWidget {
         darkTheme: CLIFTheme.dark,
       ),
     );
-    
   }
 }
