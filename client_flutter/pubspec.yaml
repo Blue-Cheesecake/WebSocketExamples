@@ -23,15 +23,18 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
   injectable: ^2.3.2
-  
+
   # Local Storage
   flutter_secure_storage: ^9.0.0
-  
+
   # State Management
   flutter_riverpod: ^2.4.9
-  
+
   # Testing
   mocktail: ^1.0.1
+
+  # Networking
+  socket_io_client: ^2.0.3+1
 
 dev_dependencies:
   flutter_test:

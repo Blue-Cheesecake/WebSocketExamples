@@ -20,5 +20,12 @@ class AppConfig {
     _isAlreadyInitialzed = true;
     env = e;
   }
-  
+
+  String get apiURL {
+    const String envURL = String.fromEnvironment('apiURL');
+    if (envURL.isNotEmpty) {
+      return envURL;
+    }
+    throw Exception('The API URL is not defined yet');
+  }
 }
