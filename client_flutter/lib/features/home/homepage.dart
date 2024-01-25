@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/widgets.dart';
+
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
@@ -10,13 +12,7 @@ class Homepage extends StatelessWidget {
         title: const Text('Homepage'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Placeholder(
-          fallbackHeight: 100,
-          fallbackWidth: 100,
-          strokeWidth: 1,
-        ),
-      ),
+      body: const Center(child: MessageListWD()),
     );
   }
 }

@@ -58,12 +58,14 @@ mixin _$BaseResult<T> {
 
 /// @nodoc
 abstract class $BaseResultCopyWith<T, $Res> {
-  factory $BaseResultCopyWith(BaseResult<T> value, $Res Function(BaseResult<T>) then) =
+  factory $BaseResultCopyWith(
+          BaseResult<T> value, $Res Function(BaseResult<T>) then) =
       _$BaseResultCopyWithImpl<T, $Res, BaseResult<T>>;
 }
 
 /// @nodoc
-class _$BaseResultCopyWithImpl<T, $Res, $Val extends BaseResult<T>> implements $BaseResultCopyWith<T, $Res> {
+class _$BaseResultCopyWithImpl<T, $Res, $Val extends BaseResult<T>>
+    implements $BaseResultCopyWith<T, $Res> {
   _$BaseResultCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -74,16 +76,20 @@ class _$BaseResultCopyWithImpl<T, $Res, $Val extends BaseResult<T>> implements $
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
-  factory _$$SuccessImplCopyWith(_$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
       __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<T, $Res> extends _$BaseResultCopyWithImpl<T, $Res, _$SuccessImpl<T>>
+class __$$SuccessImplCopyWithImpl<T, $Res>
+    extends _$BaseResultCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
-  __$$SuccessImplCopyWithImpl(_$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then) : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -113,7 +119,7 @@ class _$SuccessImpl<T> implements Success<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl<T> &&
@@ -121,7 +127,8 @@ class _$SuccessImpl<T> implements Success<T> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -197,21 +204,26 @@ abstract class Success<T> implements BaseResult<T> {
 
   T get data;
   @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith => throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FailureImplCopyWith<T, $Res> {
-  factory _$$FailureImplCopyWith(_$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
+  factory _$$FailureImplCopyWith(
+          _$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
       __$$FailureImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({AnyException exception});
 }
 
 /// @nodoc
-class __$$FailureImplCopyWithImpl<T, $Res> extends _$BaseResultCopyWithImpl<T, $Res, _$FailureImpl<T>>
+class __$$FailureImplCopyWithImpl<T, $Res>
+    extends _$BaseResultCopyWithImpl<T, $Res, _$FailureImpl<T>>
     implements _$$FailureImplCopyWith<T, $Res> {
-  __$$FailureImplCopyWithImpl(_$FailureImpl<T> _value, $Res Function(_$FailureImpl<T>) _then) : super(_value, _then);
+  __$$FailureImplCopyWithImpl(
+      _$FailureImpl<T> _value, $Res Function(_$FailureImpl<T>) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -241,11 +253,12 @@ class _$FailureImpl<T> implements Failure<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailureImpl<T> &&
-            (identical(other.exception, exception) || other.exception == exception));
+            (identical(other.exception, exception) ||
+                other.exception == exception));
   }
 
   @override
@@ -325,5 +338,6 @@ abstract class Failure<T> implements BaseResult<T> {
 
   AnyException get exception;
   @JsonKey(ignore: true)
-  _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith => throw _privateConstructorUsedError;
+  _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

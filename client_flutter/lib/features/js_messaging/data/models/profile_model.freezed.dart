@@ -74,22 +74,22 @@ class _$ProfileModelCopyWithImpl<$Res, $Val extends ProfileModel>
 }
 
 /// @nodoc
-abstract class _$$_ProfileModelCopyWith<$Res>
+abstract class _$$ProfileModelImplCopyWith<$Res>
     implements $ProfileModelCopyWith<$Res> {
-  factory _$$_ProfileModelCopyWith(
-          _$_ProfileModel value, $Res Function(_$_ProfileModel) then) =
-      __$$_ProfileModelCopyWithImpl<$Res>;
+  factory _$$ProfileModelImplCopyWith(
+          _$ProfileModelImpl value, $Res Function(_$ProfileModelImpl) then) =
+      __$$ProfileModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String fullName, int age, int counter});
 }
 
 /// @nodoc
-class __$$_ProfileModelCopyWithImpl<$Res>
-    extends _$ProfileModelCopyWithImpl<$Res, _$_ProfileModel>
-    implements _$$_ProfileModelCopyWith<$Res> {
-  __$$_ProfileModelCopyWithImpl(
-      _$_ProfileModel _value, $Res Function(_$_ProfileModel) _then)
+class __$$ProfileModelImplCopyWithImpl<$Res>
+    extends _$ProfileModelCopyWithImpl<$Res, _$ProfileModelImpl>
+    implements _$$ProfileModelImplCopyWith<$Res> {
+  __$$ProfileModelImplCopyWithImpl(
+      _$ProfileModelImpl _value, $Res Function(_$ProfileModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_ProfileModelCopyWithImpl<$Res>
     Object? age = null,
     Object? counter = null,
   }) {
-    return _then(_$_ProfileModel(
+    return _then(_$ProfileModelImpl(
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -118,12 +118,12 @@ class __$$_ProfileModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProfileModel implements _ProfileModel {
-  _$_ProfileModel(
+class _$ProfileModelImpl implements _ProfileModel {
+  _$ProfileModelImpl(
       {required this.fullName, required this.age, required this.counter});
 
-  factory _$_ProfileModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ProfileModelFromJson(json);
+  factory _$ProfileModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProfileModelImplFromJson(json);
 
   @override
   final String fullName;
@@ -138,10 +138,10 @@ class _$_ProfileModel implements _ProfileModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProfileModel &&
+            other is _$ProfileModelImpl &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
             (identical(other.age, age) || other.age == age) &&
@@ -155,12 +155,12 @@ class _$_ProfileModel implements _ProfileModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProfileModelCopyWith<_$_ProfileModel> get copyWith =>
-      __$$_ProfileModelCopyWithImpl<_$_ProfileModel>(this, _$identity);
+  _$$ProfileModelImplCopyWith<_$ProfileModelImpl> get copyWith =>
+      __$$ProfileModelImplCopyWithImpl<_$ProfileModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProfileModelToJson(
+    return _$$ProfileModelImplToJson(
       this,
     );
   }
@@ -170,10 +170,10 @@ abstract class _ProfileModel implements ProfileModel {
   factory _ProfileModel(
       {required final String fullName,
       required final int age,
-      required final int counter}) = _$_ProfileModel;
+      required final int counter}) = _$ProfileModelImpl;
 
   factory _ProfileModel.fromJson(Map<String, dynamic> json) =
-      _$_ProfileModel.fromJson;
+      _$ProfileModelImpl.fromJson;
 
   @override
   String get fullName;
@@ -183,6 +183,6 @@ abstract class _ProfileModel implements ProfileModel {
   int get counter;
   @override
   @JsonKey(ignore: true)
-  _$$_ProfileModelCopyWith<_$_ProfileModel> get copyWith =>
+  _$$ProfileModelImplCopyWith<_$ProfileModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

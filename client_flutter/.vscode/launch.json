@@ -6,8 +6,11 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "main.dart",
-      "args": ["--dart-define=apiURL=http://localhost:8081"]
+      "program": "lib/main.dart",
+      "args": [
+        // "--dart-define=apiURL=http://localhost:8081",
+        "--dart-define=apiURL=http://10.0.2.2:8081"
+      ]
     },
     {
       "name": "STG",
