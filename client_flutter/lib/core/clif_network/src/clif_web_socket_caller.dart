@@ -21,9 +21,14 @@ final class CLIFWebSocketCaller<T> implements IDisposable {
   Stream<T> get eventStream => _streamController.stream;
 
   void _listenOnEvent() async {
-    final token = await CLIFUser.instance.token;
-    final url = "${AppConfig.instance.apiURL}?token=$token";
-    _socket = si.io(url);
+    // final token = await CLIFUser.instance.token;
+    final url = AppConfig.instance.apiURL;
+
+    _socket = si.io(
+      url,
+      si.OptionBuilder().setTransports(['websocket']).enableAutoConnect().build(),
+    );
+
     _socket.on(_event, (data) {
       final T model = fromJsonT(data as Map<String, dynamic>);
       _streamController.add(model);
